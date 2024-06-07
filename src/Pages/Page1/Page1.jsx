@@ -1,22 +1,23 @@
 import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap';
-import "./Page1.css"
 import { useGSAP } from '@gsap/react';
-import Page2 from '../Page2/Page2';
+import "./Page1.css"
 
 const Page1 = () => {
     const yellow1Ref = useRef(null);
     const video = useRef(null);
-    const loderH1 = useRef(null);
+    const loaderH1 = useRef(null);
     const navAnimation = useRef(null);
+
     const { contextSafe: yellow1Animation } = useGSAP({ scope: ".yellow1" });
     const { contextSafe: videoAnimation } = useGSAP({ scope: ".loader video" });
-    const { contextSafe: loaderH1 } = useGSAP({ scope: ".loader h1" });
+    const { contextSafe: loader } = useGSAP({ scope: ".loader h1" });
     const { contextSafe: nav } = useGSAP({ scope: ".nav" });
 
     useEffect(() => {
         // Animation timeline
         const tl = gsap.timeline();
+
 
         tl.to(yellow1Ref.current, {
             top: "-100%",
@@ -33,8 +34,8 @@ const Page1 = () => {
         }, "both")
 
 
-        tl.to(loderH1.current, {
-            color: "yellow",
+        tl.to(loaderH1.current, {
+            color: "black",
             delay: 0.7,
             duration: 0.5,
         }, "both")
@@ -43,7 +44,7 @@ const Page1 = () => {
         tl.to(navAnimation.current, {
             delay: 0,
             duration: 0.5,
-            color: "yellow",
+            color: "black",
         },)
 
         return () => {
@@ -51,7 +52,7 @@ const Page1 = () => {
             tl.kill();
         };
 
-    }, [yellow1Ref, video, loderH1, navAnimation]);
+    }, [yellow1Ref, video, loaderH1, navAnimation]);
 
 
 
@@ -59,7 +60,7 @@ const Page1 = () => {
 
 
 
-        <div className="loader">
+        <div className="loader" data-scroll data-scroll-speed="-0.2" >
             <div ref={navAnimation} className="nav">
                 <div className="name">
                     <h1>Works</h1>
@@ -72,7 +73,7 @@ const Page1 = () => {
             </div>
             <div ref={yellow1Ref} className="yellow1"></div>
             <video ref={video} autoPlay muted src="/4_version1_200911_024106.mp4"></video>
-            <h1 ref={loderH1}>
+            <h1 ref={loaderH1}>
                 <em>We</em> <em> are a </em>CREATIVE<em> studio<br />
                 </em>DEDICATED <em>to </em>CULTURAL<br />
                 ADVANCEMENT <em>through</em> <br />
