@@ -1,0 +1,52 @@
+.imageM-div {
+    height: 35vw;
+    width: 30vw;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.imageM-div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+
+}
+
+.imageM-div .overlay-m {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.192);
+    position: absolute;
+    transition: all ease 0.5s;
+}
+
+.overlay-m {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    z-index: 9;
+}
+
+.overlay-m p {
+    font-size: 2.4vw;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: all ease 0.5s;
+    transition-delay: 0.2s;
+}
+
+.imageM-div:hover .overlay-m {
+    background-color: black;
+}
+
+.imageM-div:hover .overlay-m p {
+    opacity: 1;
+}
+
+.imageM-div:hover img {
+    scale: 1.1;
+}

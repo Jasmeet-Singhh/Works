@@ -1,0 +1,52 @@
+.imageL-div {
+    height: 40vw;
+    width: 30vw;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.imageL-div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+
+}
+
+.imageL-div .overlay-l {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.192);
+    position: absolute;
+    transition: all ease 0.5s;
+}
+
+.overlay-l {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    z-index: 9;
+}
+
+.overlay-l p {
+    font-size: 2.4vw;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: all ease 0.5s;
+    transition-delay: 0.2s;
+}
+
+.imageL-div:hover .overlay-l {
+    background-color: black;
+}
+
+.imageL-div:hover .overlay-l p {
+    opacity: 1;
+}
+
+.imageL-div:hover img {
+    scale: 1.1;
+}
