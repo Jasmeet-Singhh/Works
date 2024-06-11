@@ -9,10 +9,6 @@ const Page1 = () => {
     const loaderH1 = useRef(null);
     const navAnimation = useRef(null);
 
-    const { contextSafe: yellow1Animation } = useGSAP({ scope: ".yellow1" });
-    const { contextSafe: videoAnimation } = useGSAP({ scope: ".loader video" });
-    const { contextSafe: loader } = useGSAP({ scope: ".loader h1" });
-    const { contextSafe: nav } = useGSAP({ scope: ".nav" });
 
     useEffect(() => {
         // Animation timeline

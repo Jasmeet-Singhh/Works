@@ -2,7 +2,7 @@ import React from "react";
 import "./Page3.css";
 import ImageL from "../../components/Image-l/ImageL";
 import ImageM from "../../components/Image-m/ImageM";
-import ImageS from "../../components/Image-s/ImageS";
+import Footer from "../../components/Footer/Footer";
 
 const Page3 = () => {
     return (
@@ -21,6 +21,7 @@ const Page3 = () => {
 
 
             </div>
+            <Footer />
         </div>
     )
 }
