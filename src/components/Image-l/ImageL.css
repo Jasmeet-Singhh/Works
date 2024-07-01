@@ -50,3 +50,21 @@
 .imageL-div:hover img {
     scale: 1.1;
 }
+
+@media (max-width: 699px) {
+    .imageL-div {
+        width: 45vw;
+    }
+
+    .imageL-div img {
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 649px) {
+    .imageL-div {
+
+        width: 100vw;
+
+    }
+}

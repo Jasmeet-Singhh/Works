@@ -12,3 +12,42 @@
     flex-wrap: wrap;
     overflow: auto;
 }
+
+@media (max-width: 1599px) {
+    .image-container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .image-container {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 993px) {
+    .image-container {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 799px) {
+    .image-container {
+        gap: 9px;
+
+    }
+}
+
+@media (max-width: 769px) {
+    .image-container {
+        gap: 5px;
+
+    }
+}
+
+@media (max-width: 643px) {
+    .image-container {
+        gap: 15px;
+
+    }
+}

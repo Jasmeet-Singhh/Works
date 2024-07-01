@@ -108,3 +108,9 @@
     font-family: 'Freight';
     src: url('./src/assets/fonts/Freight-Big-Pro-Book-Italic.woff2') format('woff2')
 }
+
+@media (max-width: 769px) {
+    .nav .menu {
+        display: none;
+    }
+}
