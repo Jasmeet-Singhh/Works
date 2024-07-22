@@ -63,3 +63,31 @@ h3,
     cursor: pointer;
     font-weight: 400;
 }
+
+@media (max-width: 652px) {
+
+    .left-content,
+    .right-content {
+        font-size: 8px;
+        overflow-x: hidden;
+        padding: 5px 12px;
+    }
+
+    .backToTop {
+        font-size: 8px;
+    }
+
+    .right-content {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .left-content,
+    .right-content {
+        font-size: 7px;
+
+
+    }
+}
